@@ -1,26 +1,24 @@
 package net.olejarz;
 
+import net.olejarz.config.TeamsConfig;
+
 public class Main {
 
     public static void main(String[] args) {
         System.out.println("Super Manager");
+        TeamsConfig teamsConfig = new TeamsConfig();
+        Team[] teams = teamsConfig.getTeams();
 
-        Team team1 = new Team();
-        team1.setName("FKS STAL MIELEC");
-        team1.setTeampower(100);
 
-        Team team2 = new Team();
-        team2.setName("LEGIA WARSZAWA");
-        team2.setTeampower(90);
-
-        Team team3 = new Team();
-        team3.setName("CRACOVIA");
-        team3.setTeampower(90);
-
-        if(team1.getTeampower() > team2.getTeampower()){
-            System.out.println("Wygrywa " + team1.getName() + " 5:1");
+        if (teams[0].getTeampower() > teams[1].getTeampower()) {
+            System.out.println("Wygrywa " + teams[0].getName() + " 5:1");
         } else {
-            System.out.println("Wygrywa " + team2.getName() + " 5:1");
+            System.out.println("Wygrywa " + teams[1].getName() + " 5:1");
         }
+        for (int i = 0; i < teams.length; i++) {
+            System.out.println(teams[i].getName());
+        }
+
+
     }
 }
