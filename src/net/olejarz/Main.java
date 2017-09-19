@@ -11,7 +11,11 @@ public class Main {
 
         Team team2 = new Team();
         team2.setName("LEGIA WARSZAWA");
-        team2.setTeampower(101);
+        team2.setTeampower(90);
+
+        Team team3 = new Team();
+        team3.setName("CRACOVIA");
+        team3.setTeampower(90);
 
         if(team1.getTeampower() > team2.getTeampower()){
             System.out.println("Wygrywa " + team1.getName() + " 5:1");
