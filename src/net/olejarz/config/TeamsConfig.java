@@ -3,8 +3,10 @@ package net.olejarz.config;
 import net.olejarz.model.Player;
 import net.olejarz.model.Team;
 
+import java.util.ArrayList;
+
 public class TeamsConfig {
-    public Team[] getTeams() {
+    public ArrayList<Team> getTeams() {
         Team team1 = new Team();
         team1.setName("FKS STAL MIELEC");
         team1.setTeampower(100);
@@ -81,13 +83,17 @@ public class TeamsConfig {
         player12.setSkill(70);
         team4.addPlayer(player12);
 
-        Team[] teams;
-        teams = new Team[4];
-        teams[0] = team1;
-        teams[1] = team2;
-        teams[2] = team3;
-        teams[3] = team4;
-
+//        Team[] teams;
+        ArrayList<Team> teams = new ArrayList<>();
+//        teams = new Team[4];
+//        teams[0] = team1;
+//        teams[1] = team2;
+//        teams[2] = team3;
+//        teams[3] = team4;
+        teams.add(team1);
+        teams.add(team2);
+        teams.add(team3);
+        teams.add(team4);
 
         return teams;
     }

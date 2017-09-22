@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Team {
     private String name;
     private int teampower;
-    private ArrayList players = new ArrayList();
+    private ArrayList<Player> players = new ArrayList<>();
 
     public void addPlayer(Player player){
         this.players.add(player);
